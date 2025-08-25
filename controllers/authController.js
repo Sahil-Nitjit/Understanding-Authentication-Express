@@ -3,8 +3,6 @@ const { doHash, doHashValidation, hmacProcess } = require("../utils/hashing");
 const User = require('../models/usersModel');
 const jwt=require('jsonwebtoken');
 const transport = require("../middlewares/sendMail");
-const usersModel = require("../models/usersModel");
-const { exist } = require("joi");
 require('dotenv').config()
 exports.signup=async(req,res)=>{
    const {email,password}=req.body;
